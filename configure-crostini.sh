@@ -54,4 +54,5 @@ cp -rvf ./files/systemd  ~/.config/
 gsettings set org.gnome.desktop.interface gtk-theme "Adapta-Nokto"
 
 # set some settings for vs-code
+mkdir -p ~/.config/Code/User
 cp -f ./files/vscode-settings.json ~/.config/Code/User/settings.json
