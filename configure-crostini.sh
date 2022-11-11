@@ -30,21 +30,23 @@ git config --global user.name "Brad Anderson"
 git config --global pull.rebase true
 git config --global init.defaultBranch main
 
-# make sure we have the pip binary path
-if ! grep -qF "export PATH=$PATH:~/.local/bin" ~/.zshrc; then
-  echo "export PATH=$PATH:~/.local/bin" >> ~/.zshrc
-  source ~/.zshrc
-fi
 # install pip packages
 pip3 install --user ansible molecule
 
 # install oh-my-zsh
 sudo -E chsh --shell /usr/bin/zsh $USER
-if [ -z /home/$USER/.oh-my-zsh ]; then
+if [ ! -d /home/$USER/.oh-my-zsh ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
+
+# make sure we have the pip binary path
+if ! grep -qF "export PATH=$PATH:~/.local/bin" ~/.zshrc; then
+  echo "export PATH=$PATH:~/.local/bin" >> ~/.zshrc
+  source ~/.zshrc
+fi
+
 #Set the zsh theme
-#sed --in-place 's/ZSH_THEME=.*$/ZSH_THEME=agnoster/' ~/.zshrc
+sed --in-place 's/ZSH_THEME=.*$/ZSH_THEME=agnoster/' ~/.zshrc
 
 # cp over gtk config for dark theme
 cp ./files/.gtkrc-2.0 ~/.gtkrc-2.0
