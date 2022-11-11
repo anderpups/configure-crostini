@@ -15,8 +15,8 @@ sudo apt -y dist-upgrade
 # install apt packages
 sudo apt -y install zsh python3-pip fonts-powerline tldr adapta-gtk-theme dconf-editor gh
 
-git config --global user.email "youremail@email.com"
-git config --global user.name "Your Name"
+git config --global user.email "anderpups@gmail.com"
+git config --global user.name "Brad Anderson"
 git config --global pull.rebase true
 git config --global init.defaultBranch main
 
