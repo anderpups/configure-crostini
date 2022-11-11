@@ -4,5 +4,3 @@ This shell script will do the following:
 - installs ansible and molecule via pip
 - Sets some git configs
 - sets zsh theme to agnoster
-
-Note: Make sure to install VS-Code first
