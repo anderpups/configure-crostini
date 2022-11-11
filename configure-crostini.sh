@@ -23,7 +23,7 @@ sudo apt update
 sudo apt -y dist-upgrade
 
 # install apt packages
-sudo apt -y install zsh python3-pip fonts-powerline tldr adapta-gtk-theme dconf-editor gh code
+sudo apt -y install zsh python3-pip fonts-powerline adapta-gtk-theme dconf-editor gh code
 
 git config --global user.email "anderpups@gmail.com"
 git config --global user.name "Brad Anderson"
@@ -37,8 +37,6 @@ if ! grep -qF "export PATH=$PATH:~/.local/bin" ~/.zshrc; then
 fi
 # install pip packages
 pip3 install --user ansible molecule
-# Pull down latest tldr entries
-tldr -u
 
 # install oh-my-zsh
 sudo -E chsh --shell /usr/bin/zsh $USER
