@@ -44,7 +44,7 @@ if [ -z /home/$USER/.oh-my-zsh ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 #Set the zsh theme
-sed --in-place 's/ZSH_THEME=.*$/ZSH_THEME=agnoster/' ~/.zshrc
+#sed --in-place 's/ZSH_THEME=.*$/ZSH_THEME=agnoster/' ~/.zshrc
 
 # cp over gtk config for dark theme
 cp ./files/.gtkrc-2.0 ~/.gtkrc-2.0
