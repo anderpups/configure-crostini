@@ -23,7 +23,7 @@ sudo apt update
 sudo apt -y dist-upgrade
 
 # install apt packages
-sudo apt -y install zsh python3-pip fonts-powerline adapta-gtk-theme dconf-editor gh code
+sudo apt -y install zsh python3-pip fonts-powerline adapta-gtk-theme dconf-editor gh code tilix
 
 git config --global user.email "anderpups@gmail.com"
 git config --global user.name "Brad Anderson"
